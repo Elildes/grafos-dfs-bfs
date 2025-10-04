@@ -8,14 +8,13 @@ A leitura e impressão dos grafos pode utilizar bibliotecas externas, mas a impl
 
 ## Dependências
 
-- Python 3.8 ou superior
-- [networkx](https://networkx.org/) (para leitura de arquivos DOT)
-- [pydot](https://github.com/pydot/pydot) (opcional, para manipulação de DOT)
-- Graphviz instalado (opcional, para visualização)
+- Python 3.13.7 ou superior
+- [pydot](https://github.com/pydot/pydot): Para ler e interpretar arquivos no formato DOT.
+- **Graphviz**: Ferramenta necessária para renderizar e salvar os grafos como imagens.
 
 Para instalar as dependências, execute:
 
-`pip install networkx pydot`
+`pip install pydot`
 
 ## Execução
 
