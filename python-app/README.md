@@ -10,11 +10,13 @@ A leitura e impressão dos grafos pode utilizar bibliotecas externas, mas a impl
 
 - Python 3.13.7 ou superior
 - [pydot](https://github.com/pydot/pydot): Para ler e interpretar arquivos no formato DOT.
-- **Graphviz**: Ferramenta necessária para renderizar e salvar os grafos como imagens.
+- [Graphviz](https://graphviz.org/download/): Ferramenta necessária para renderizar e salvar os grafos como imagens.
 
 Para instalar as dependências, execute:
 
-`pip install pydot`
+`pip install pydot`  
+`pip show pydot`  
+`dot -V`  
 
 ## Execução
 
@@ -27,7 +29,7 @@ cd grafos-dfs-bfs/python-app
 
 2. Execute o programa principal:
 
-`python main.py caminho/do/arquivo.dot`
+`python main.py graphs\ex01.dot`  
 
 ## Estrutura do Projeto
 
@@ -38,7 +40,33 @@ cd grafos-dfs-bfs/python-app
 
 ## Exemplo de Uso
 
-`python main.py exemplos/grafo.dot`
+```python
+PS C:\...\Git\grafos-dfs-bfs\python-app> python .\main.py .\graphs\ex02.dot`  
+Imagem do grafo salva em '.\graphs\ex02.png'
+------------------------------
+Resultado da Busca em Largura (BFS):
+a -> b -> c -> d
+------------------------------
+
+Resultado da Busca em Profundidade (DFS):     
+
+Iniciando busca a partir da árvore com raiz a:
+  Visitando: a (Início: 1)
+  Visitando: b (Início: 2)
+  Visitando: c (Início: 3)
+  Finalizando: c (Fim: 4)
+  Visitando: d (Início: 5)
+  Finalizando: d (Fim: 6)
+  Finalizando: b (Fim: 7)
+  Finalizando: a (Fim: 8)
+
+Resumo dos tempos (Início/Fim):
+  Vértice a: 1/8
+  Vértice b: 2/7
+  Vértice c: 3/4
+  Vértice d: 5/6
+------------------------------
+```
 
 ## Referências
 
